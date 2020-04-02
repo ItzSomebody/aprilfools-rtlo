@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <textarea id="lolbox"></textarea>
+        <button onclick="do_magic()">Magic it up</button>
+        <script>
+            function do_magic() {
+                var element = document.getElementById("lolbox");
+                var message = element.value
+                var magicked = "";
+
+                for (var i = 0; i < message.length; i++) {
+                    magicked += message.charAt(i) + (Math.random() >= 0.5 ? '\u202d' : '\u202e')
+                }
+
+                element.value = magicked
+            }
+        </script>
+    </body>
+</html>
